@@ -1,4 +1,15 @@
-h1
+.bloc_page 
 {
-
+    height: 900px;
+    margin: auto;
+}
+#logo
+{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.illustration
+{   display: flex;
+    justify-content: center;
 }
