@@ -1,15 +1,17 @@
-.bloc_page 
-{
+@media all {
+}
+
+.bloc_page {
     height: 900px;
     margin: auto;
 }
-#logo
-{
+#logo img {
+    width: 100px;
     display: flex;
     justify-content: space-between;
-  
 }
-.illustration
-{   display: flex;
+
+.illustration {
+    display: flex;
     justify-content: center;
 }
