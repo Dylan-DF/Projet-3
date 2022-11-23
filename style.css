@@ -1,17 +1,76 @@
-@media all {
+@media screen and (max-width: 1023px) {
+}
+@media screen and (min-width: 767px) {
 }
 
 .bloc_page {
-    height: 900px;
+    height: 100%;
     margin: auto;
+    border-color: blue;
+    border-style: dashed;
 }
-#logo img {
-    width: 100px;
+#logo {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+#icone_profil {
+    width: 24px;
+    height: 20px;
+    margin-right: 5px;
+}
+#logo_gbaf {
+    margin-left: 40px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    width: 150px;
+    height: 70px;
+}
+header p {
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 40px;
+}
+.section_presentation p {
+    height: 100%;
+    width: auto;
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+h1 {
+    text-align: left;
+    margin-left: 40px;
 }
 
-.illustration {
-    display: flex;
-    justify-content: center;
+.illustration img {
+    height: 135px;
+    width: 70%;
+    margin-left: 40px;
+}
+.section_acteurs {
+    height: 100%;
+    width: auto;
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+h2 {
+    margin-left: 40px;
+}
+#texte_acteur {
+    margin-left: 40px;
+}
+.logo_acteur {
+    margin-left: 40px;
+}
+.Dsa {
+}
+.Format {
+}
+.Protect {
+}
+.Cde {
 }
