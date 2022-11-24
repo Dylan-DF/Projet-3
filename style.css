@@ -1,13 +1,6 @@
-@media screen and (max-width: 1023px) {
-}
-@media screen and (min-width: 767px) {
-}
-
 .bloc_page {
     height: 100%;
     margin: auto;
-    border-color: blue;
-    border-style: dashed;
 }
 #logo {
     width: 100%;
@@ -63,14 +56,45 @@ h2 {
 #texte_acteur {
     margin-left: 40px;
 }
-.logo_acteur {
-    margin-left: 40px;
+.acteur {
+    width: auto;
+    margin-left: 100px;
+    margin-top: 50px;
+    border-style: double;
 }
-.Dsa {
+.logo_acteur p {
+    width: 80%;
+    margin-left: 100px;
+    border-color: aquamarine;
+    border-style: dashed;
+    float: right;
+    text-align: center;
 }
-.Format {
+.logo_acteur h3 {
+    text-align: center;
 }
-.Protect {
+#Dsa {
+    width: 80px;
+    height: 30px;
 }
-.Cde {
+#Forma {
+    width: 80px;
+    height: 30px;
+}
+#Protect {
+    width: 80px;
+    height: 30px;
+}
+#Cde {
+    width: 80px;
+    height: 30px;
+}
+.contenue_footer {
+    width: 100%;
+    border-top: 1px solid black;
+    margin-top: 50px;
+}
+#Mention {
+    text-align: center;
+    margin-top: 20px;
 }
