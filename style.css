@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+    height: 1000px;
+    background-color: beige;
+}
 .bloc_page {
     height: 100%;
     margin: auto;
@@ -40,12 +45,12 @@ h1 {
 }
 
 .illustration img {
-    height: 135px;
-    width: 70%;
-    margin-left: 40px;
+    height: 120px;
+    width: 200px;
+    margin-left: 50px;
 }
 .section_acteurs {
-    height: 100%;
+    height: 70%;
     width: auto;
     margin-top: 10px;
     border-top: 1px solid black;
@@ -57,44 +62,59 @@ h2 {
     margin-left: 40px;
 }
 .acteur {
-    width: auto;
+    width: 90%;
     margin-left: 100px;
     margin-top: 50px;
     border-style: double;
+    position: relative;
 }
+.acteur h3 {
+    border-top: 1px solid;
+    text-align: center;
+}
+
 .logo_acteur p {
-    width: 80%;
+    width: auto;
     margin-left: 100px;
-    border-color: aquamarine;
-    border-style: dashed;
-    float: right;
-    text-align: center;
-}
-.logo_acteur h3 {
-    text-align: center;
+    margin-bottom: 60px;
 }
 #Dsa {
     width: 80px;
     height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    margin-top: 50px;
 }
 #Forma {
     width: 80px;
     height: 30px;
+    position: absolute;
+    top: 10px;
+    margin-top: 180px;
+    margin-left: 10px;
 }
 #Protect {
     width: 80px;
     height: 30px;
+    position: absolute;
+    top: 30px;
+    margin-top: 280px;
+    margin-left: 10px;
 }
 #Cde {
     width: 80px;
     height: 30px;
+    position: absolute;
+    bottom: 15px;
+    margin-left: 10px;
+    margin-bottom: 40px;
 }
 .contenue_footer {
     width: 100%;
     border-top: 1px solid black;
-    margin-top: 50px;
+    margin-top: auto;
 }
 #Mention {
     text-align: center;
-    margin-top: 20px;
 }
