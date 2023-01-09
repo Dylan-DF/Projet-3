@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Connexion</h>
+
     <form action="login.php" method="post">
         
         <label for="Nom utilisateur">Utilisateur :</label>
@@ -17,6 +18,7 @@
 
         <input type="submit"  value="valider">
     </form>
+    <a href="pass_oublie.php">Mot de passe oublié ?</a>
 
 
 </body>

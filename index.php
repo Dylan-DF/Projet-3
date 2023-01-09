@@ -25,15 +25,18 @@ require_once "fonction.php";
                     
                 <?php
                     if(isLogged()){
-                        echo "coucou";
-                    }else{    
+                        echo  $_SESSION["user"];?>
+                        <a href="deco.php">deconnexion</a>
+                    <?php }else{     
                  ?>       
                     <p> <a href="connexion.php">
                         <img
                             id="icone_profil"
                             src="img/IconProfil.png"
                             alt="icone utilisateur"
-                        />Nom & Prénom</a>
+                        />connexion</a>
+                        <a href="inscription.php">inscription</a>
+
                     </p>
                     <?php } ?>
                 </div>
@@ -70,59 +73,8 @@ require_once "fonction.php";
                 </div>
                 <div class="acteurs">
 
-
-
                 <?php
-                    /*$acteurs = [
-                        [
-                            'name' => 'Dsa France',
-                            'img' => 'img/acteurs/Dsa_france.png',
-                            'description' => "Dsa France accélère la croissance du territoire
-                            et s’engage avec les collectivités
-                            territoriales. Nous accompagnons les entreprises
-                            dans les étapes clés de leur évolution. Notre
-                            philosophie : s’adapter à chaque entreprise.
-                            Nous les accompagnons pour voir plus grand et
-                            plus loin et proposons des solutions de
-                            financement adaptées à chaque étape de la vie
-                            des entreprises
-
-                            <a href=\"https://www.dsa.fr/\">lien</a>",
-                        ],
-                        [
-                            'name' => 'Forma',
-                            'img' => 'img/acteurs/formation_co.png',
-                            'description' => "Formation&co est une association française présente
-                            sur tout le territoire. Nous proposons à des
-                            personnes issues de tout milieu de devenir
-                            entrepreneur grâce à un crédit et un accompagnement
-                            professionnel et personnalisé.
-
-                            <a href=\"https://www.formationsco.com/\">lien</a>",
-
-                        ],
-                        [
-                            'name' => 'Protectpeople',
-                            'img' => 'img/acteurs/protectpeople.png',
-                            'description' => "Protectpeople finance la solidarité nationale. Nous
-                            appliquons le principe édifié par la Sécurité
-                            sociale française en 1945 : permettre à chacun de
-                            bénéficier d’une protection sociale.
-
-                           <a href=\"https://www.ameli.fr/\">lien</a>",
-                        ],
-                        [
-                            'name' => 'Cde',
-                            '0' => 'Cde',
-                            'img' => 'img/acteurs/CDE.png',
-                            'description' => "La CDE (Chambre Des Entrepreneurs) accompagne les
-                            entreprises dans leurs démarches de formation. Son
-                            président est élu pour 3 ans par ses pairs, chefs
-                            d’entreprises et présidents des CDE.
-
-                            <a href=\"https://lecde.club/\">lien</a>",
-                        ],
-                    ];*/
+                    
 
                     $pdo = new PDO('mysql:host=localhost;dbname=gbaf', 'root', '');
 
@@ -152,7 +104,7 @@ require_once "fonction.php";
                             <h3><?=$acteur["acteur"]?></h3>
                             <p><?=$acteur["description"]?></p>
                         </div>
-                        <a class="bouton" href="#">lire la suite</a>
+                        <a class="bouton" href="acteur.php?id=<?=$acteur["id_acteur"]?>">lire la suite</a>
                     </div>
                 <?php endforeach?>
 

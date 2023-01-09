@@ -20,3 +20,4 @@
     $query->execute([$nom,$prenom,$username,$password,$question,$reponse]);
 
     echo "vous avez bien été enregistré";
+    header('Location: index.php');      
