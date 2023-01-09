@@ -1,14 +1,25 @@
 <?php session_start();
+require_once "fonction.php";
+
 $pdo = new PDO('mysql:host=localhost;dbname=gbaf', 'root', '');
 $pdo->exec('SET NAMES UTF8');
 
+  if(isLogged()){
+     echo  $_SESSION["user"];}?> 
+        
+ <?php              
 if(isset($_GET['id']) AND !empty($_GET['id'])) {
 
     $getid = htmlspecialchars($_GET['id']);
 
-    $article = $pdo->prepare('SELECT * FROM acteurs WHERE id_acteur = ?');
-    $article->execute(array($getid));
-    $article = $article->fetch();
+    $query = $pdo->prepare('
+    SELECT a.id_acteur, a.acteur, a.description, a.logo, SUM(v.vote) note 
+    FROM acteurs a
+    INNER JOIN vote v ON a.id_acteur = v.id_acteur  
+    WHERE a.id_acteur = ?
+    ');
+    $query->execute(array($getid));
+    $acteur = $query->fetch();
 
     if(isset($_POST['submit_commentaire'])) {
             if(isset($_POST['commentaire']) AND !empty($_POST['commentaire']
@@ -28,14 +39,13 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
             }
     }
 
-
-
 ?>
-
+     
 <h2>Acteur:</h2>
-<p><?= $article['description'] ?></p>
 
+<p><?= $acteur['description'] ?></p>
 <br /><br />
+<p>note:<?= $acteur['note'] ?></p>
 
 <h2>commentaires:</h2>
     <form method="POST">
@@ -50,3 +60,4 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
 
 <a href="note.php?actor=<?= $getid ?>&note=1"> like</a> 
 <a href="note.php?actor=<?= $getid ?>&note=-1"> dislike</a> 
+
