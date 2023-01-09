@@ -15,7 +15,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
     $query = $pdo->prepare('
     SELECT a.id_acteur, a.acteur, a.description, a.logo, SUM(v.vote) note 
     FROM acteurs a
-    INNER JOIN vote v ON a.id_acteur = v.id_acteur  
+    LEFT JOIN vote v ON a.id_acteur = v.id_acteur  
     WHERE a.id_acteur = ?
     ');
     $query->execute(array($getid));
