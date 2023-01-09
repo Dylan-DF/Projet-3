@@ -24,3 +24,12 @@ function isLogged(): bool
 {
     return isset($_SESSION["user"]);
 }
+
+function getUserId(): ?int
+{
+    $id = $_SESSION["id_user"] ?? null;
+    if(null === $id){
+        return $id;
+    }
+    return (int) $id;
+}
